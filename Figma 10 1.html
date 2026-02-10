@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Find From This - Login</title>
+<style>
+    body {
+        display: flex;
+        height: 100vh;
+    }
+
+
+    .left {
+        width: 70%;
+        background: linear-gradient(135deg, #f4b1b3, #cce6c6);
+        padding: 60px;
+
+    }
+
+
+    .left h1 {
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+
+
+    .left p {
+        font-size: 20px;
+        width: 80%;
+        line-height: 1.5;
+    }
+
+
+    .right {
+        width: 50%;
+        background: #bbbdb9;
+        padding: 60px;
+    }
+
+
+    .right h2 {
+        font-size: 35px;
+        margin-bottom: 20px;
+    }
+
+
+    .label {
+        margin: 15px 0 5px;
+              color: #666;
+    }
+
+
+    .btn-select {
+        padding: 12px 25px;
+        border-radius: 20px;
+        border: none;
+        background: pink
+    }
+
+
+    .btn-select:hover {
+        background: #9c7f7f;
+    }
+
+
+    .input-box {
+        width: 80%;
+        padding: 12px;
+        border-radius: 20px;
+        margin-bottom: 15px;
+        background: #ffffff;
+    }
+
+
+    .login-btn {
+        padding: 12px 40px;
+        border-radius: 20px;
+        border: none;
+        background: #c4f3d8;
+        font-size: 18px;
+    }
+
+
+    .login-btn:hover {
+        background: #82b6a2;
+    }
+
+
+    .row {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+
+    .remember {
+        display: flex;
+        align-items: center;
+    }
+
+
+    .forgot {
+        margin-left: 20px;
+        color: #666;
+    }
+</style>
+</head>
+
+
+<body>
+
+
+<div class="left">
+    <h1>Welcome to “Find From This”!</h1>
+    <p>
+        Our website will help you find tutors who are more than willing to help you with art
+        projects and assignments!  
+        <br><br>
+        See which teachers are available at the moment.
+    </p>
+</div>
+
+
+<div class="right">
+    <h2>User Login</h2>
+
+
+    <p class="label">Who are you?</p>
+    <button class="btn-select">Student</button>
+    <button class="btn-select">Teacher</button>
+
+
+    <br><br>
+    <input type="text" placeholder="Gmail" class="input-box">
+    <input type="password" placeholder="Password" class="input-box">
+
+
+    <div class="row">
+        <div class="remember">
+            <input type="checkbox" checked>
+            <label>Remember?</label>
+        </div>
+        <span class="forgot">Forgot password?</span>
+    </div>
+
+
+    <br>
+    <button class="login-btn">Log in</button>
+</div>
+</body>
+</html>

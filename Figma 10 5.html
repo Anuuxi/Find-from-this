@@ -1,0 +1,135 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Talent Show - Subjects</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  body{
+    margin:0;
+    min-height:100vh;
+    background: linear-gradient(180deg,#4b6ac9,#9fc0ff);
+    color:#1a2a3a;
+    font-family:'Roboto Slab', serif;
+    display:flex;align-items:flex-start;justify-content:center;
+  }
+  header{
+    width:100%;
+    background:#243b7a;
+    color:white;padding:14px 18px;font-family:'Playfair Display',serif;font-size:26px;
+  }
+  .wrap{
+    width:880px;margin-top:18px;background:transparent;padding:28px;
+  }
+  .title{
+    font-family:'Playfair Display',serif;font-size:56px;color:#0b203e;margin:6px 0 18px 6px;
+  }
+
+
+  .table{
+    background:#fff;border-radius:28px;padding:0 18px 18px 18px;overflow:hidden;
+    box-shadow:0 6px 20px rgba(0,0,0,0.1);
+  }
+  .grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:0;
+  }
+  .grid .header{
+    grid-column: 1 / -1;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background:transparent;
+    padding:18px 24px;
+  }
+  .header div{ text-align:center;font-weight:700;font-size:22px;padding:12px 6px; }
+
+
+  .body{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .row{
+    display:contents;
+  }
+  .cell{
+    padding:22px;border-top:1px solid #e8e8e8;text-align:center;
+    min-height:64px;font-size:18px;
+  }
+  .subject{
+    text-align:left;padding-left:28px;font-size:26px;color:#2f6c3a;font-family:'Playfair Display',serif;
+  }
+  .available{ color:#7a8f5f; font-weight:700; }
+  .teacher{ color:#222; }
+
+
+  .actions{
+    margin-top:18px;display:flex;gap:28px;align-items:center;justify-content:center;padding-bottom:10px;
+  }
+  .btn{
+    border-radius:28px;padding:14px 28px;font-size:18px;border:none;cursor:pointer;
+    box-shadow:0 6px 0 rgba(0,0,0,0.12);
+  }
+  .btn.cancel{ background:#e7e7e7;color:#555; }
+  .btn.primary{ background:#495b92;color:white; }
+
+
+  .hint{ text-align:right;color:rgba(0,0,0,0.2);margin-top:6px;padding-right:18px;font-size:14px;}
+</style>
+</head>
+<body>
+  <header>Subjects</header>
+
+
+  <div class="wrap">
+    <div class="title">Talent show:</div>
+
+
+    <div class="table" role="table" aria-label="Talent show times">
+      <div class="header" role="rowgroup">
+        <div style="border-top-left-radius:24px;border-bottom-left-radius:0">10 am</div>
+        <div>2 pm</div>
+        <div style="border-top-right-radius:24px;border-bottom-right-radius:0">4 pm</div>
+      </div>
+
+
+      <div class="body" role="rowgroup">
+        <div class="cell subject">Art</div>
+        <div class="cell available">Available</div>
+        <div class="cell teacher">Teacher A</div>
+
+
+        <div class="cell subject">Drama</div>
+        <div class="cell teacher">Teacher C</div>
+        <div class="cell teacher">Teacher D</div>
+
+
+        <div class="cell subject">Choir</div>
+        <div class="cell teacher">Teacher E</div>
+        <div class="cell available">Available</div>
+      </div>
+
+
+      <div style="padding:6px 18px 18px 18px;">
+        <div class="body" style="grid-template-columns: 1fr 1fr 1fr;">
+          <div class="cell subject" style="border-top:none"> </div>
+          <div class="cell available">Teacher A</div>
+          <div class="cell teacher">Teacher B</div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="actions">
+      <button class="btn cancel">Cancel</button>
+      <button class="btn primary">Make appointment?</button>
+    </div>
+
+
+    <div class="hint">Look for another event?</div>
+  </div>
+</body>
+</html>
+

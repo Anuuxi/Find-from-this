@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Register</title>
+<link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  body{
+    margin:0;
+    min-height:100vh;
+    background: linear-gradient(135deg,#ffd28a,#d0ff9a);
+    font-family:'Roboto Slab', serif;
+    display:flex;align-items:flex-start;justify-content:center;
+  }
+  header{
+    width:100%;
+    background:#b06f3f;
+    padding:14px 22px;
+    color:white;
+    box-sizing:border-box;
+    font-family:'Poiret One',cursive;
+    font-size:28px;
+  }
+  .card{
+    width:520px;
+    margin:28px auto;
+    background:transparent;
+    padding:18px 22px;
+    box-sizing:border-box;
+  }
+
+
+  .avatar-wrap{
+    display:flex;flex-direction:column;align-items:center;margin-top:18px;
+  }
+  .avatar{
+    width:180px;height:180px;border-radius:6px;border:2px solid rgba(0,0,0,0.15);
+    display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.6);
+    font-size:84px;color:rgba(0,0,0,0.25);
+    position:relative;
+  }
+  .avatar .edit{
+    position:absolute;right:8px;bottom:8px;background:white;border-radius:6px;padding:6px;box-shadow:0 2px 6px rgba(0,0,0,0.15)
+  }
+
+
+  form{
+    margin-top:20px;display:flex;flex-direction:column;gap:12px;align-items:center;
+  }
+  .field{
+    width:78%;background:rgba(255,244,246,0.9);padding:10px 14px;border-radius:999px;
+    box-shadow:inset 0 1px 0 rgba(0,0,0,0.02);
+  }
+  .field input{
+    width:100%;border:none;background:transparent;font-size:18px;font-family:inherit;outline:none;
+  }
+
+
+  .socials{ display:flex;gap:18px;margin-top:12px; }
+  .btn{
+    padding:12px 18px;border-radius:999px;background:white;box-shadow:0 4px 0 rgba(0,0,0,0.06);
+    display:flex;align-items:center;gap:10px;border:none;cursor:pointer;font-weight:600;
+  }
+
+
+  @media(max-width:560px){
+    .card{ width:92%; }
+    .field{ width:94%; }
+  }
+</style>
+</head>
+<body>
+  <header>Resgister</header>
+
+
+  <div class="card">
+    <div class="avatar-wrap">
+      <div class="avatar" role="img" aria-label="Avatar placeholder">
+        <span>👤</span>
+        <div class="edit">✎</div>
+      </div>
+
+
+      <form onsubmit="event.preventDefault();alert('Register submitted (demo)')">
+        <div class="field"><label style="display:block;color:#c9a8b1;margin-bottom:6px;font-weight:700">Gmail:</label><input placeholder="yourname@gmail.com" type="email" required></div>
+        <div class="field"><label style="display:block;color:#c9a8b1;margin-bottom:6px;font-weight:700">Pass:</label><input placeholder="password" type="password" required></div>
+        <div class="field"><label style="display:block;color:#c9a8b1;margin-bottom:6px;font-weight:700">Pass confirm:</label><input placeholder="confirm password" type="password" required></div>
+
+
+        <div class="socials">
+          <button class="btn" type="button" onclick="alert('Twitter signin (demo)')">
+            <svg width="18" height="18" viewBox="0 0 24 24"><path d="M22 5.9c-.6.3-1.2.5-1.9.6.7-.4 1.2-1.1 1.4-1.9-.7.4-1.4.6-2.2.8C18.6 4.7 17.4 4 16 4c-2 0-3.6 1.6-3.6 3.6 0 .3 0 .7.1 1C9.9 8.6 7.4 7.2 6 5.2c-.3.6-.5 1.2-.5 1.9 0 1.3.6 2.4 1.6 3.1-.6 0-1.1-.2-1.6-.5 0 1.8 1.3 3.3 3.1 3.6-.3.1-.7.1-1 .1-.3 0-.6 0-.9-.1.6 2 2.4 3.4 4.5 3.4-1.6 1.3-3.6 2-5.8 2-.4 0-.8 0-1.2-.1C6 20.3 8.3 21 10.8 21c6.5 0 10-5.4 10-10v-.4c.7-.5 1.2-1.1 1.6-1.8-.7.3-1.5.5-2.4.6z" fill="#1da1f2"/></svg>
+            Sign in with twitter
+          </button>
+
+
+          <button class="btn" type="button" onclick="alert('Google signin (demo)')">
+            <svg width="18" height="18" viewBox="0 0 24 24"><path d="M21.6 11.2h-9.6v2.8h5.8c-.5 2.6-3.1 5-6.8 5-4.1 0-7.6-3.2-7.6-7.2s3.4-7.2 7.6-7.2c1.9 0 3.3.8 4.1 1.5l2.2-2.1C17.5 2.9 15 2 12 2 6.5 2 2 6.3 2 11.9s4.5 9.9 10 9.9c5.8 0 10-4 10-9.6 0-.6 0-1.1-.4-1.0z" fill="#ea4335"/></svg>
+            Sign in with google
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
